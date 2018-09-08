@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Foundation //not sure if I still need this
+import Foundation
 import AVFoundation
 
 class ViewController: UIViewController {
@@ -74,9 +74,7 @@ class ViewController: UIViewController {
     }
     
     func updateAnimal(currAnFed: Int, currAnPlayed: Int) {
-//        happinessView.value = CGFloat(currAnPlayed % 10) / 10
         happinessView.value = CGFloat(currAnPlayed) / 10
-//        foodView.value = CGFloat(currAnFed % 10) / 10
         foodView.value = CGFloat(currAnFed) / 10
         happinessView.animateValue(to: happinessView.value)
         foodView.animateValue(to: foodView.value)
@@ -85,7 +83,6 @@ class ViewController: UIViewController {
     }
     
     @IBAction func playButton(_ sender: UIButton) {
-//        let currentDifference1 = pet.animalPlayed - pet.animalFed
         if foodView.value <= 0 {
             return
         }
@@ -106,12 +103,10 @@ class ViewController: UIViewController {
             happinessView.value = 1.0
         }
         else {
-//           happinessView.value = CGFloat(currAnPlay % 10) / 10
             happinessView.value = CGFloat(currAnPlay) / 10
         }
         happinessView.animateValue(to: happinessView.value)
         playCount.text = "played: \(currAnPlay)"
-//        foodView.value -= 0.1
     }
     
     @IBAction func feedButton(_ sender: UIButton) {
@@ -135,17 +130,14 @@ class ViewController: UIViewController {
             foodView.value = 1.0
         }
         else {
-//           foodView.value = CGFloat(currAnFeed % 10) / 10
             foodView.value = CGFloat(currAnFeed) / 10
         }
         foodView.animateValue(to: foodView.value)
         foodCount.text = "fed: \(currAnFeed)"
-//        happinessView.value -= 0.1
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
 
