@@ -24,11 +24,8 @@ class Pet {
     private (set) var animalFed: Int
     
     //learned to play audio using several stackoverflow and online resources
-    //got sounds from soundbible.com and freesoundeffects.com (not all of them are public domain oops)
+    //got sounds from soundbible.com and freesoundeffects.com
     
-//    var audioPlayer = AVAudioPlayer()
-//    var hSoundPath = Bundle.main.path(forResource: "", ofType: "mp3")
-//    var fSoundPath = Bundle.main.path(forResource: "", ofType: "mp3")
     var hSound: SystemSoundID!
     var fSound: SystemSoundID!
     
@@ -63,14 +60,6 @@ class Pet {
     }
     
     func happySound() {
-//        do { //not sure if this should go here
-////            audioPlayer = try AVAudioPlayer(contentsOf: <#T##URL#>(fileURLWithPath: hSoundPath!))
-//            audioPlayer = try AVAudioPlayer(data: hSound, fileTypeHint: "mp3")
-//            audioPlayer.play()
-//            print("Sound played")
-//        } catch {
-//            print("Could not load audio file")
-//        }
         switch animalType {
             case .dog:
                 hSound = makeHSound(resourceName: "bark3")
@@ -82,8 +71,6 @@ class Pet {
                 hSound = makeHSound(resourceName: "CartoonHop")
             case .fish:
                 hSound = makeHSound(resourceName: "Bubbles")
-//        default:
-//            print("switch did not work")
                 }
         AudioServicesPlaySystemSound(hSound)
     }
@@ -110,8 +97,6 @@ class Pet {
             fSound = makeFSound(resourceName: "prdog3")
         case .fish:
             fSound = makeFSound(resourceName: "BubblingEating")
-//        default:
-//            print("switch did not work")
         }
         AudioServicesPlaySystemSound(fSound)
     }
