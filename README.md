@@ -7,9 +7,8 @@ I added sound effects when an animal is successfully played with or fed, this wa
 
 
 To run:
-
-Download XCode onto your computer (wait for the download to finish before continuing
-Click "Clone or download" from https://github.com/tiffanybalc/Pet-App and click "Open in XCode"
-Click on the triangular play button to Build and Run
-Note: To test on different devices such as an iPad, you may need to download additional simulators
-Enjoy!
+1. Download XCode onto your computer (wait for the download to finish before continuing
+2. Click "Clone or download" from https://github.com/tiffanybalc/Pet-App and click "Open in XCode"
+3. Click on the triangular play button to Build and Run
+- Note: To test on different devices such as an iPad, you may need to download additional simulators
+4. Enjoy!
